@@ -4,15 +4,21 @@ import clsx from 'clsx';
 
 interface Props {
   children: React.ReactNode;
+  selected?: boolean;
   className?: string;
 }
 
-const MenuItem = ({ children, className = '' }: Props): React.ReactElement => (
+const MenuItem = ({
+  children,
+  selected = false,
+  className = '',
+}: Props): React.ReactElement => (
   <div
     className={clsx(
-      'rounded-md flex-initial font-semibold bg-yellow-500 hover:bg-yellow-600',
+      'rounded-md flex-initial font-semibold',
       'p-2 text-center text-white uppercase shadow-sm',
-      className
+      className,
+      selected ? 'bg-yellow-700' : 'bg-yellow-500 hover:bg-yellow-600'
     )}
   >
     {children}

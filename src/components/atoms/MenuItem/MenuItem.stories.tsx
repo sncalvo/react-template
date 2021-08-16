@@ -15,3 +15,9 @@ export const Item = Template.bind({});
 Item.args = {
   children: <h2>Test</h2>,
 };
+
+export const ItemSelected = Template.bind({});
+ItemSelected.args = {
+  children: <h2>Test</h2>,
+  selected: true,
+};

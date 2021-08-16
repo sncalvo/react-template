@@ -14,7 +14,7 @@ const TextInput = ({ type = 'text', placeholder, onChange, className }: Props) =
     <input
       className={clsx(
         'rounded-lg py-2 px-4 placeholder-gray-400 bg-white',
-        'text-gray-900 appearance-none shadow-md',
+        'text-gray-900 appearance-none shadow-md w-full',
         'focus:outline-none focus:ring-2 focus:ring-yellow-500'
       )}
       type={type}
