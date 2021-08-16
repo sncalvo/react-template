@@ -11,7 +11,7 @@ interface UserInfo {
 const createDefaultUser = () => ({ name: '', email: '', password: '' });
 
 const SignUpForm = (): React.ReactElement => {
-  const [user, setUser] = useState(createDefaultUser());
+  const [user, setUser] = useState<UserInfo>(createDefaultUser());
 
   return (
     <div className="h-48 w-60 bg-yellow-600 flex flex-col justify-center p-5">
