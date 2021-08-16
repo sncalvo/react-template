@@ -1,3 +1,2 @@
-config-overrides.js
-.eslintrc.js
+*.js
 reportWebVitals.ts

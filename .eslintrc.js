@@ -1,4 +1,4 @@
-module.exports = {
+module.export = {
   extends: ['airbnb-typescript', 'prettier'],
   plugins: ['prettier'],
   parserOptions: {

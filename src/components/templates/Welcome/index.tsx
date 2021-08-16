@@ -2,7 +2,7 @@ import React from 'react';
 
 import logo from '@assets/icons/logo.svg';
 
-const Welcome: React.FC = () => (
+const Welcome = (): React.ReactElement => (
   <header>
     <img src={logo} alt="logo" />
     <p>
