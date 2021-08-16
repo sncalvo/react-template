@@ -10,8 +10,10 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "typescript": "4.1.6",
     "web-vitals": "^1.0.1"
@@ -21,7 +23,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "postinstall": "husky install && cd app && yarn install",
+    "postinstall": "husky install",
     "lint": "eslint --fix .",
     "format": "prettier -w ."
   },
@@ -49,7 +51,6 @@
     ]
   },
   "devDependencies": {
-    "husky": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
@@ -59,6 +60,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
     "prettier": "^2.3.2",
     "react-app-rewire-alias": "^1.0.3",
     "react-app-rewired": "^2.1.8"
