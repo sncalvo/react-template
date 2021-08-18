@@ -4,7 +4,6 @@ const { override, addPostcssPlugins } = require('customize-cra');
 
 const aliasMap = configPaths('./tsconfig.paths.json');
 
-// module.exports = alias(aliasMap);
 module.exports.jest = override(
   aliasJest(aliasMap),
   addPostcssPlugins([require('tailwindcss'), require('autoprefixer')])

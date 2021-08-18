@@ -6,6 +6,7 @@ import Welcome from '@components/templates/Welcome';
 import SignUp from '@components/templates/SignUp';
 
 import MenuItem from '@components/atoms/MenuItem';
+import UsersPage from '../UsersPage';
 
 const Main = (): React.ReactElement => (
   <BrowserRouter>
@@ -16,6 +17,9 @@ const Main = (): React.ReactElement => (
         </MenuItem>
         <MenuItem className="m-1">
           <Link to="/about">About</Link>
+        </MenuItem>
+        <MenuItem className="m-1">
+          <Link to="/users">Users</Link>
         </MenuItem>
         <MenuItem className="m-1">
           <Link to="/signup">SignIn</Link>
@@ -31,6 +35,9 @@ const Main = (): React.ReactElement => (
       </Route>
       <Route path="/signup">
         <SignUp />
+      </Route>
+      <Route path="/users">
+        <UsersPage />
       </Route>
       <Route path="/">
         <Welcome />
