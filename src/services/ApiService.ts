@@ -14,7 +14,7 @@ class Api {
       ...Api.commonHeaders,
     };
 
-    const response = await fetch(process.env.API_URL ?? '' + url, request);
+    const response = await Api.fetch(url, request);
 
     return response.json();
   };
@@ -25,7 +25,7 @@ class Api {
       ...Api.commonHeaders,
     };
 
-    const response = await fetch(process.env.API_URL ?? '' + url, request);
+    const response = await Api.fetch(url, request);
 
     return response.json();
   };
@@ -37,7 +37,7 @@ class Api {
       ...Api.commonHeaders,
     };
 
-    const response = await fetch(process.env.API_URL ?? '' + url, request);
+    const response = await Api.fetch(url, request);
 
     return response.json();
   };
@@ -48,10 +48,13 @@ class Api {
       ...Api.commonHeaders,
     };
 
-    const response = await fetch(process.env.API_URL ?? '' + url, request);
+    const response = await Api.fetch(url, request);
 
     return response.json();
   };
+
+  static fetch = (url: string, request: RequestInit) =>
+    fetch((process.env.REACT_APP_API_URL ?? '') + url, request);
 }
 
 export default Api;

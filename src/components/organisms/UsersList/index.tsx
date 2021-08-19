@@ -11,9 +11,9 @@ const UsersList = (): React.ReactElement => {
   }, []);
 
   return (
-    <div>
-      {users?.map((user) => (
-        <UserItem user={user} />
+    <div className="p-5">
+      {users?.map((user, index) => (
+        <UserItem className="my-10" user={user} key={index} />
       ))}
     </div>
   );

@@ -3,7 +3,7 @@ import Api from './ApiService';
 import User from '@models/User';
 
 class UsersService {
-  static getUsers = () => Api.get<User[]>('users');
+  static getUsers = async () => (await Api.get<{ data: User[] }>('users')).data;
   static getUser = (id: string | number) => Api.get<User>(`users/${id}`);
   static createUser = (user: User) => Api.post<User>(`users`, user);
   static updateUser = (user: User) => Api.put<User>(`users`, user);
