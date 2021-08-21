@@ -1,6 +1,44 @@
-# Getting Started with Create React App
+# React Template
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installing prerequisites
+
+Node: 16.4.1
+
+### Node version
+
+It is _highly_ recommended to use [nvm](https://github.com/nvm-sh/nvm#install--update-script) to manage your node versions.
+
+```sh
+nvm install 16.4.1
+```
+
+## Yarn
+
+After installing the node version you should also install the yarn
+package manager using npm.
+
+```sh
+npm install --global yarn
+```
+
+Yarn is a package manager as well as npm that addresses security and
+performance shortcomings from npm.
+
+## Packages
+
+After installing yarn we can install all the required packages
+(defined in `package.json` and locked in `yarn.lock`).
+
+```
+yarn install
+```
+
+## Env
+
+All envs have to be setup in a `.env.development` file for dev
+environment and `.env.test` file for testing environment.
+
+The primary env variable is `REACT_APP_API_URL` for the api variable.
 
 ## Available Scripts
 
@@ -19,6 +57,11 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `yarn lint`
+
+Runs the linter (eslint in this case) and warns for all
+offenses through the command line.
+
 ### `yarn build`
 
 Builds the app for production to the `build` folder.\
@@ -29,20 +72,19 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Guidelines
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Guidelines for style and format of code should be followed to
+ensure readability as well as productivity.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The source code uses typescript for typechecking. For formatting we
+use prettier and for code style eslint, following
+[https://github.com/airbnb/javascript](airbnb's style guide for js).
 
 ## Deployment
 
 For deployment we will use [Heroku Buildpack for create-react-app](https://github.com/nhutphuongit/create-react-app-buildpack#commit--deploy-%EF%B8%8F).
-This will take care of all dependencies for build process done at heroku.
+This will take care of all dependencies for build processes done at heroku.
 
 ## Learn More
 
